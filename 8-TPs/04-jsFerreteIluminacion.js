@@ -8,7 +8,59 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
-function CalcularPrecio () 
+function CalcularPrecio() 
 {
- 	
+    var cantidadDeLamparas;
+    var marca;
+    var precio;
+
+    cantidadDeLamparas = txtIdCantidad.value;
+    marca = marca.value;
+    precio = txtIdPrecioDescuento.value;
+
+    if (cantidadDeLamparas >= 6){
+        precio = ((cantidadDeLamparas *6) * 0.5);
+    }else{
+        if (cantidadDeLamparas == 5 && marca == "ArgentinaLuz"){
+            precio = ((cantidadDeLamparas * 5) * 0.4);
+
+        }else{
+            if (cantidadDeLamparas == 5 && marca != "ArgentinaLuz"){
+                precio = ((cantidadDeLamparas * 5) * 0.3 );
+            }else {
+               if (cantidadDeLamparas == 4 && marca == "ArgentinaLuz"){
+                   precio = ((cantidadDeLamparas * 4) * 0.25);
+               }else {
+                   if (cantidadDeLamparas == 4 && marca == "FelipeLamparas"){
+                       precio = ((cantidadDeLamparas * 4) * 0.25);
+                   }else {
+                       if (cantidadDeLamparas == 4){
+                           precio = ((cantidadDeLamparas * 4) * 0.2  );
+                       }else {
+                           if (cantidadDeLamparas == 3 && marca == "ArgentinaLuz"){
+                               precio = ((cantidadDeLamparas * 3) * 0.15);
+                           }else{
+                               if (cantidadDeLamparas == 3 && marca == "FelipeLamparas"){
+                                   precio = ((cantidadDeLamparas * 3) * 0.10);
+                               }else{
+                                   if (cantidadDeLamparas == 3){
+                                       precio = ((cantidadDeLamparas * 3) * 0.5)
+                                   }
+                               }
+                           }
+                       }
+                    }
+                   }
+               }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 }
