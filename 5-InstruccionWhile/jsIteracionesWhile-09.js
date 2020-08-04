@@ -22,5 +22,6 @@ function mostrar()
 	 if (numero < minimo) { 
 		 minimo = numero;
 	 } }
+	}
 
 }//FIN DE LA FUNCIÓN

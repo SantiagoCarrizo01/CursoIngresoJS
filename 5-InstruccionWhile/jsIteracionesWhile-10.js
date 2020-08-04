@@ -22,7 +22,9 @@ function mostrar()
 	while(respuesta=="si")
 	{
 		
-		respuesta=prompt("desea continuar?");
+		respuesta=confirm("Desea continuar?");
+		while (respuesta === true);
+		
 	}//fin del while
 
 	document.write("la suma de negativos es :"+sumaNegativos);
